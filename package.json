@@ -1,11 +1,11 @@
 {
-  "name": "atom-dark-ui",
+  "name": "simple-dark-ui",
   "theme": "ui",
   "version": "0.51.1",
-  "description": "A dark UI theme for Atom",
+  "description": "A simple dark UI theme for Atom",
   "license": "MIT",
-  "repository": "https://github.com/atom/atom-dark-ui",
+  "repository": "https://github.com/NateJLewis/simple-dark-ui",
   "engines": {
-    "atom": ">0.40.0"
+    "simple": ">0.40.0"
   }
 }
