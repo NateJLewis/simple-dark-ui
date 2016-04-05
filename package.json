@@ -1,11 +1,11 @@
 {
-  "name": "simple-dark-ui",
-  "theme": "ui",
-  "version": "0.51.1",
-  "description": "A simple dark UI theme for Atom",
-  "license": "MIT",
-  "repository": "https://github.com/NateJLewis/simple-dark-ui",
-  "engines": {
-    "simple": ">0.40.0"
-  }
+	"name": "simple-dark-ui",
+	"theme": "ui",
+	"version": "0.0.1",
+	"description": "A simple dark UI theme for Atom",
+	"license": "MIT",
+	"repository": "https://github.com/NateJLewis/simple-dark-ui",
+	"engines": {
+		"simple": ">0.40.0"
+	}
 }

@@ -1,0 +1,85 @@
+.list-tree.has-collapsable-children {
+	.list-nested-item {
+		> .list-item {
+			padding-left: 0;
+
+			> span.icon::before {
+				content: "";
+				width: 0;
+				margin-right: 0;
+			}
+
+		}
+		> .list-tree {
+			> .list-item {
+				padding-left: 0;
+
+				> span.icon::before {
+					content: "";
+					width: 0;
+					margin-right: 0;
+				}
+			}
+			> .list-nested-item {
+				&.expanded {
+					.list-tree {
+						background-color: @simple-dark-black;
+						max-width: 95%;
+					}
+				}
+				> .list-tree {
+
+					> .list-item {
+						padding-left: 0;
+
+						> span.icon::before {
+							content: "";
+							width: 10px;
+							margin-right: 0;
+						}
+
+					}
+				}
+			}
+		}
+	}
+}
+.tree-view li:not(.directory).selected:before {
+    max-width: 75%;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tab-bar .tab.modified:not(:hover) .close-icon,
+.tab-bar .tab .close-icon {
+    right: 0;
+	top: 0;
+	bottom: 0;
+	width: 16px;
+    height: 16px;
+	height: 50px;
+
+}
+
+.tab-bar .tab.modified:not(:hover) .close-icon {
+	border: 1px solid transparent;
+	border-radius: 0;
+}
+
+
+.tab-bar .tab .close-icon::before {
+	top: 0;
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+}
+
+
+.tab-bar .tab.modified:not(:hover) .close-icon::before,
+.tab-bar .tab.modified.active .close-icon::before,
+.tab-bar .tab.modified .close-icon::before {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    content: "\f087";
+}

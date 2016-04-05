@@ -1,14 +1,21 @@
-// Colors
+@simple-dark-black: #222222;
+@simple-black: #333333;
+@simple-gray: #757575;
+@simple-white: #eaeaea;
+@simple-orange: #d64937;
+@simple-blue: #37c4d6;
+@simple-green: #37d649;
+@simple-red: #f16f73;
+// Text Colors
+@text-color:           darken(@simple-white, 15%);
+@text-color-subtle:    darken(@simple-white, 35%);
+@text-color-highlight: darken(@simple-white, 15%);
+@text-color-selected:  darken(@simple-white, 15%);
 
-@text-color: #aaa;
-@text-color-subtle: #555;
-@text-color-highlight: #fff;
-@text-color-selected: @text-color-highlight;
-
-@text-color-info: #5293d8;
-@text-color-success: #2BDA77;
-@text-color-warning: #ff982d;
-@text-color-error: #c00;
+@text-color-info:    darken(@simple-white, 15%);
+@text-color-success: darken(@simple-white, 15%);
+@text-color-warning: darken(@simple-white, 15%);
+@text-color-error:   darken(@simple-white, 15%);
 
 @text-color-ignored: @text-color-subtle;
 @text-color-added: @text-color-success;
@@ -16,64 +23,68 @@
 @text-color-modified: @text-color-warning;
 @text-color-removed: @text-color-error;
 
-@background-color-info: #0098ff;
-@background-color-success: #17ca65;
-@background-color-warning: #ffaa2c;
-@background-color-error: #c00;
-@background-color-highlight: rgba(255, 255, 255, 0.07);
-@background-color-selected: #4182C4;
+// Background colors
+@background-color-info:    @simple-green;
+@background-color-success: @simple-blue;
+@background-color-warning: @simple-orange;
+@background-color-error:   @simple-red;
 
-@app-background-color: #333;
+@background-color-highlight: lighten(@simple-black, 5%);
+@background-color-selected:  lighten(@simple-black, 10%);
+@app-background-color:       @simple-black;
 
-@base-background-color: lighten(@tool-panel-background-color, 5%);
-@base-border-color: rgba(0, 0, 0, 0.5);
+// Base colors
+@base-background-color: @simple-black;
+@base-border-color:     @simple-dark-black;
 
-@pane-item-background-color: @base-background-color;
-@pane-item-border-color: rgba(0, 0, 0, 0.5);
+// Component colors
+@pane-item-background-color: @simple-black;
+@pane-item-border-color:     @base-border-color;
 
-@input-background-color: #212224;
-@input-border-color: @base-border-color;
+@input-background-color: @app-background-color;
+@input-border-color:     @base-border-color;
 
-@tool-panel-background-color: #1d1f21;
-@tool-panel-border-color: @base-border-color;
+@tool-panel-background-color: @simple-black;
+@tool-panel-border-color:     @base-border-color;
 
-@inset-panel-background-color: #161719;
-@inset-panel-border-color: @base-border-color;
+@inset-panel-background-color: lighten(@simple-black, 4%);
+@inset-panel-border-color:     @base-border-color;
 
-@panel-heading-background-color: #43484d;
-@panel-heading-border-color: fadein(@base-border-color, 10%);
+@panel-heading-background-color: lighten(@simple-black, 4%);
+@panel-heading-border-color:     @base-border-color;
 
-@overlay-background-color: #202123;
-@overlay-border-color: @background-color-highlight;
+@overlay-background-color: lighten(@simple-black, 5%);
+@overlay-border-color:     @base-border-color;
 
-@button-background-color: #43484d;
-@button-background-color-hover: lighten(@button-background-color, 5%);
-@button-background-color-selected: #5c6064;
-@button-border-color: @base-border-color;
+@button-background-color:          lighten(@simple-black, 10%);
+@button-background-color-hover:    lighten(@button-background-color, 12%);
+@button-background-color-selected: @button-background-color-hover;
+@button-border-color:              @base-border-color;
 
-@tab-bar-background-color: #222;
-@tab-bar-border-color: darken(@tab-background-color-active, 10%);
-@tab-background-color: #333;
-@tab-background-color-active: #222;
-@tab-border-color: #484848;
+@tab-bar-background-color:    @simple-black;
+@tab-bar-border-color:        @base-border-color;
+@tab-background-color:        @tab-bar-background-color;
+@tab-background-color-active: lighten(@tab-bar-background-color, 10%);
+@tab-border-color:            @base-border-color;
 
-@tree-view-background-color: #303030;
-@tree-view-border-color: @tool-panel-border-color;
+@tree-view-background-color: @simple-black;
+@tree-view-border-color:     @base-border-color;
 
-@scrollbar-background-color: #222425; // Needs to be opaque -> atom/atom/issues/4578
-@scrollbar-color: rgba(92, 92, 92, 0.5);
+@scrollbar-background-color: rgba(0,0,0, 0); // Needs to be opaque -> atom/atom/issues/4578
+@scrollbar-color: rgba(0,0,0, 0);
 
-@ui-site-color-1: @background-color-success; // green
-@ui-site-color-2: @background-color-info; // blue
-@ui-site-color-3: @background-color-warning; // orange
-@ui-site-color-4: #db2ff4; // purple
-@ui-site-color-5: #f5e11d; // yellow
+// Site colors
+@ui-site-color-1: @simple-dark-black;
+@ui-site-color-2: @background-color-info;
+@ui-site-color-3: @background-color-success;
+@ui-site-color-4: @background-color-warning;
+@ui-site-color-5: @background-color-error;
 
 
 // Sizes
 
-@font-size: 11px;
-@input-font-size: 14px;
+@font-size: 14px;
+@input-font-size: 12px;
 
 @disclosure-arrow-size: 12px;
 
@@ -81,11 +92,10 @@
 @component-icon-padding: 5px;
 @component-icon-size: 16px;
 @component-line-height: 25px;
-@component-border-radius: 2px;
+@component-border-radius: 0px;
 
-@tab-height: 26px;
+@tab-height: 50px;
 
 
 // Other
-
-@font-family: 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+@font-family: 'Source Sans Pro', sans-serif;
